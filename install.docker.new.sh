@@ -7,7 +7,6 @@ echo "cURL Version: $(curl --version | head -n 1)"
 echo "Docker Version: $(docker -v)"
 echo "Docker Compose Version: $(docker compose version)"
 
-
 if [ ! -f docker/.env ]
 then
   echo "Generating .env file..."
@@ -23,7 +22,7 @@ then
   read -p "Enter your PORT: " PORT
   PORT="${PORT:=4000}"
 
-  DB_PASSWORD=$(node -e "console.log(require('crypto').randomBytes(48).toString('base64'));")
+  DB_PASSWORD=$(openssl rand -hex 48)
 
   echo "ENV=$ENV" > docker/.env
   echo "PORT=$PORT" >> docker/.env
@@ -37,6 +36,7 @@ then
   docker compose build teledrive
   docker compose up -d
   sleep 2
+  docker compose exec teledrive yarn workspace api prisma migrate reset
   docker compose exec teledrive yarn workspace api prisma migrate deploy
 else
   git pull origin main
@@ -52,4 +52,4 @@ else
   git reset --hard
   git clean -f
   git pull origin main
-  fi
+fi

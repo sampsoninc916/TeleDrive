@@ -31,6 +31,11 @@ Or, just send us an [issue](https://github.com/mgilangjanuar/teledrive/issues) f
 
 If you're experiencing issues check this https://github.com/mgilangjanuar/teledrive/issues/373
 
+# Deploy to Railway
+[![Deploy](https://railway.app/button.svg)](https://railway.app/new/template/m4m_XE?referralCode=BvMMSE)
+
+(DrakeTDL's forked Teledrive repo powers the railway template.)
+
 ## Folder Structure
 
 We using the monorepo structure with [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/).
@@ -58,7 +63,4 @@ We using the monorepo structure with [yarn workspaces](https://classic.yarnpkg.c
 ## Community
 [![img](https://user-images.githubusercontent.com/34012548/172031316-60d858c7-8401-42f3-9c73-0b75e80c8292.png)](https://discord.gg/PKNVJwAZnR)
 
-   <a href="https://discord.gg/PKNVJwAZnR"> <img src="https://user-images.githubusercontent.com/34012548/172031316-60d858c7-8401-42f3-9c73-0b75e80c8292.png" alt="discord"></a>
-
 [![img](https://media.discordapp.net/attachments/978783095463501834/984317776544014416/ytbutton.png)](https://youtube.com/channel/UCg9WsNAHdOpo8SyM8JHGuZQ)
-
